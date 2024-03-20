@@ -1,4 +1,7 @@
 # SFKiller
+
+![SFKiller Logo](https://i.imgur.com/EF3ovdQ.png)
+
 SFKiller debloats your device of unnecessary .sfk (Vegas Pro) files
 
 [This was my first project working with VS and C#]
