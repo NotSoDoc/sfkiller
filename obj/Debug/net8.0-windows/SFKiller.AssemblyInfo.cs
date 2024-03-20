@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SFKiller")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f335a53e85cb9b52788213f0f93f20c14af1100")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+195ac2740071f995bf7498ee5c0adf56ba380ddc")]
 [assembly: System.Reflection.AssemblyProductAttribute("SFKiller")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SFKiller")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

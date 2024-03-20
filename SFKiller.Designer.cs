@@ -1,4 +1,6 @@
-﻿namespace SFKiller
+﻿using SFKiller.Properties;
+
+namespace SFKiller
 {
     partial class SFKiller
     {
@@ -83,7 +85,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.SFKillerImage;
+            pictureBox1.Image = Resources.SFKiller;
             pictureBox1.Location = new Point(34, 50);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(318, 76);

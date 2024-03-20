@@ -15,3 +15,4 @@ C:\Users\offic\repos\SFKiller\SFKiller\obj\Debug\net8.0-windows\SFKiller.pdb
 C:\Users\offic\repos\SFKiller\SFKiller\obj\Debug\net8.0-windows\SFKiller.genruntimeconfig.cache
 C:\Users\offic\repos\SFKiller\SFKiller\obj\Debug\net8.0-windows\ref\SFKiller.dll
 C:\Users\offic\repos\SFKiller\SFKiller\obj\Debug\net8.0-windows\SFKiller.Properties.Resources.resources
+C:\Users\offic\repos\SFKiller\SFKiller\obj\Debug\net8.0-windows\SFKiller.sourcelink.json

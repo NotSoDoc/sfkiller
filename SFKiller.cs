@@ -1,3 +1,6 @@
+using System.Linq;
+using System.Text.RegularExpressions;
+
 namespace SFKiller
 {
     public partial class SFKiller : Form
@@ -35,8 +38,22 @@ namespace SFKiller
 
         private async void button1_Click(object sender, EventArgs e)
         {
+            // Check if a drive is selected
+            if (comboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a valid drive.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // Select the Drive
-            string selectedDrive = comboBox1.SelectedItem.ToString();
+            string selectedDrive = comboBox1.Text;
+
+            // Check if the selected drive exists
+            if (!Directory.Exists(selectedDrive))
+            {
+                MessageBox.Show("The selected drive does not exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             // Show loading bar
             progressBar1.Style = ProgressBarStyle.Marquee;
@@ -48,6 +65,7 @@ namespace SFKiller
 
             // Stop loading bar (or specifically the animation)
             progressBar1.MarqueeAnimationSpeed = 0;
+            progressBar1.Style = ProgressBarStyle.Continuous;
 
             // Count the number of .sfk files found
             int sfkFileCount = sfkFiles.Count;
@@ -91,11 +109,14 @@ namespace SFKiller
         {
             try
             {
-                // Search for .sfk files in the directory
-                string[] files = Directory.GetFiles(directory, "*.sfk");
+                // Search for files matching the regex pattern -> thanks to angelolz
+                string[] files = Directory.GetFiles(directory)
+                    .Where(file => Regex.IsMatch(Path.GetFileName(file), @"^.*(?:\.sf(?:k|ap)\d*)$"))
+                    .ToArray();
+
                 sfkFiles.AddRange(files);
 
-                // Search subdirectories
+                // Search subdirectories recursively
                 string[] subdirectories = Directory.GetDirectories(directory);
                 foreach (string subdirectory in subdirectories)
                 {

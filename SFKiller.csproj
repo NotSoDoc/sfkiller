@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="SFKiller.png" />
     <Content Include="SFKiller.ico" />
   </ItemGroup>
 

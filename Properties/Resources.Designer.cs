@@ -63,9 +63,9 @@ namespace SFKiller.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SFKillerImage {
+        internal static System.Drawing.Bitmap SFKiller {
             get {
-                object obj = ResourceManager.GetObject("SFKillerImage", resourceCulture);
+                object obj = ResourceManager.GetObject("SFKiller", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
